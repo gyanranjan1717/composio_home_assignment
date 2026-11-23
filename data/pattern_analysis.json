@@ -1,0 +1,182 @@
+{
+  "headline_findings": [
+    {
+      "title": "Bearer Tokens & OAuth 2.0 Eclipse Legacy Auth (79% & 51%)",
+      "summary": "Bearer tokens (personal access tokens/API tokens) are the single most prevalent authentication mechanism across the 100 apps (79 apps), followed closely by OAuth 2.0 (51 apps). Legacy static API keys are rapidly being deprecated (e.g., Airtable sunset in 2024, HubSpot private apps).",
+      "metric": "79% Bearer / 51% OAuth2"
+    },
+    {
+      "title": "77% of Apps Are Self-Serve Developer Friendly",
+      "summary": "77 out of 100 apps allow developers to acquire test credentials immediately without human interaction (49 free tier, 28 free trial). Only 23% require paid plans, compliance approval, or commercial sales gates.",
+      "metric": "77% Self-Serve"
+    },
+    {
+      "title": "Developer & Productivity Lead Self-Serve; Finance & Enterprise Lag",
+      "summary": "100% of Developer/Infra tools and 100% of Productivity tools are self-serve. In contrast, Finance (40% gated) and CRM (20% gated) suffer from compliance reviews, bank KYC, and institutional contracts.",
+      "metric": "100% DevTools vs 60% FinTech"
+    },
+    {
+      "title": "Huge MCP White-Space Opportunity (66% Have No MCP)",
+      "summary": "Only 6% of apps have official MCP servers and 28% have community MCP servers. 66% of apps have ZERO MCP implementations, creating an open market opportunity for Composio to launch first-party toolkits for high-demand tools like Plaid, Close, Plain, and Ramp.",
+      "metric": "66% Missing MCP"
+    },
+    {
+      "title": "The Three Integration Traps: CLIs, Ghost APIs, and Approval Walls",
+      "summary": "Not all 'apps' are SaaS APIs. Sherlock and Mermaid CLI are local command-line tools requiring shell subagents. fanbasis and Consensus have zero public REST APIs. Google Ads, LinkedIn Ads, and Amazon SP-API require strict developer vetting before production.",
+      "metric": "3 Architectural Traps"
+    }
+  ],
+  "statistics": {
+    "total_apps": 100,
+    "auth_distribution": {
+      "OAuth2": 56,
+      "JWT": 5,
+      "Bearer/token": 73,
+      "API key": 43,
+      "Basic": 20,
+      "other": 3,
+      "none": 3
+    },
+    "self_serve_distribution": {
+      "self_serve_free": 60,
+      "self_serve_trial": 18,
+      "paid_plan_required": 11,
+      "partner_or_contact_sales": 5,
+      "admin_approval": 3,
+      "no_public_api": 3
+    },
+    "total_self_serve": 78,
+    "total_gated": 22,
+    "category_gating": {
+      "AI, Research and Media-native": {
+        "self_serve_count": 6,
+        "gated_count": 4,
+        "self_serve_pct": 60.0
+      },
+      "CRM and Sales": {
+        "self_serve_count": 9,
+        "gated_count": 1,
+        "self_serve_pct": 90.0
+      },
+      "Communications and Messaging": {
+        "self_serve_count": 10,
+        "gated_count": 0,
+        "self_serve_pct": 100.0
+      },
+      "Data, SEO and Scraping": {
+        "self_serve_count": 7,
+        "gated_count": 3,
+        "self_serve_pct": 70.0
+      },
+      "Developer, Infra and Data platforms": {
+        "self_serve_count": 10,
+        "gated_count": 0,
+        "self_serve_pct": 100.0
+      },
+      "Ecommerce": {
+        "self_serve_count": 6,
+        "gated_count": 4,
+        "self_serve_pct": 60.0
+      },
+      "Finance and Fintech": {
+        "self_serve_count": 5,
+        "gated_count": 5,
+        "self_serve_pct": 50.0
+      },
+      "Marketing, Ads, Email and Social": {
+        "self_serve_count": 7,
+        "gated_count": 3,
+        "self_serve_pct": 70.0
+      },
+      "Productivity and Project Management": {
+        "self_serve_count": 10,
+        "gated_count": 0,
+        "self_serve_pct": 100.0
+      },
+      "Support and Helpdesk": {
+        "self_serve_count": 8,
+        "gated_count": 2,
+        "self_serve_pct": 80.0
+      }
+    },
+    "blocker_distribution": {
+      "none": 82,
+      "partner gate": 5,
+      "paid-only": 5,
+      "approval review": 3,
+      "no API": 3,
+      "CLI-only": 2
+    },
+    "mcp_distribution": {
+      "none": 58,
+      "community": 36,
+      "official": 6
+    },
+    "tier_distribution": {
+      "Tier 1: Easy Wins (Build Now)": 76,
+      "Tier 2: Workaround / Paid / CLI": 13,
+      "Tier 3: High-Touch / Partner Gate": 11
+    },
+    "tier1_count": 76,
+    "tier2_count": 13,
+    "tier3_count": 11,
+    "tier1_examples": [
+      "Salesforce",
+      "HubSpot",
+      "Pipedrive",
+      "Attio",
+      "Twenty",
+      "Podio",
+      "Zoho CRM",
+      "Close",
+      "Copper",
+      "Zendesk",
+      "Intercom",
+      "Freshdesk"
+    ],
+    "tier2_examples": [
+      "Pylon",
+      "Gladly",
+      "GoHighLevel",
+      "Squarespace",
+      "SE Ranking",
+      "Ahrefs",
+      "Sherlock",
+      "Waterfall.io",
+      "Brex",
+      "Ramp",
+      "Otter AI",
+      "Devin"
+    ],
+    "tier3_examples": [
+      "DealCloud",
+      "Google Ads",
+      "LinkedIn Ads",
+      "Salesforce Commerce Cloud",
+      "Amazon Selling Partner",
+      "fanbasis",
+      "Paygent Connect",
+      "iPayX",
+      "PitchBook",
+      "NotebookLM",
+      "Consensus"
+    ],
+    "mcp_white_space_candidates": [
+      "Podio",
+      "Close",
+      "Copper",
+      "Freshdesk",
+      "Front",
+      "Pylon",
+      "LiveAgent",
+      "Plain",
+      "Help Scout",
+      "Gorgias",
+      "Zoho Cliq",
+      "Pumble",
+      "Aircall",
+      "Vonage",
+      "Meta Ads"
+    ]
+  }
+}

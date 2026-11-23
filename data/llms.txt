@@ -1,0 +1,28 @@
+# Composio App Research & Integration Analysis (100 Apps)
+# Machine-readable summary for AI agents and LLMs
+
+## Overview
+- Project: Composio AI Product Ops Take-Home Assignment
+- Scope: 100 SaaS, DevTool, and Enterprise Applications evaluated for AI agent toolkit buildability.
+- Execution: Multi-phase autonomous research agent with verification loops and human ground-truth calibration.
+
+## Key Metrics
+- Total Apps: 100 across 10 categories
+- Self-Serve Rate: 78.0% (49 Free Tier, 29 Free Trial)
+- Gated Rate: 22.0% (8 Paid-Only, 6 Partner/Sales Gated, 5 Admin Approval, 3 No Public API)
+- Buildable Today: 85 Yes, 11 Partial, 4 No
+- MCP Server Coverage: 6 Official, 36 Community, 58 None (White-Space Opportunity)
+- Empirical Accuracy: Pass 1 Strict: 80.0% -> Pass 2 Strict: 100.0% (+20.0% lift via verification loop)
+
+## Actionable Tiers
+- Tier 1 (Easy Wins, Build Now): 76 apps (Frictionless self-serve developer access with public REST/GraphQL APIs).
+- Tier 2 (Workarounds / Paid / CLI): 13 apps (Requires paid subscription, trial credits, or local CLI wrapper).
+- Tier 3 (High-Touch / Partner Gated): 11 apps (Requires enterprise sales outreach, merchant underwriting, or manual developer review).
+
+## Edge Cases & Architectural Traps
+- CLI-Only (Not SaaS REST): Sherlock (Python OSINT CLI), Mermaid CLI (npm diagram compiler).
+- Ghost APIs (No Public 3rd Party API): fanbasis, Consensus, NotebookLM (consumer app; enterprise via Vertex AI).
+- High-Friction Developer Reviews: Google Ads (developer token review), LinkedIn Ads (partner review), Amazon SP-API (AWS SigV4 + seller vetting).
+
+## Data Schema
+Each record contains: id, name, category, one_liner, auth_methods, self_serve, self_serve_reason, api_surface (type, breadth, public_docs, existing_mcp, mcp_link), buildable_today, main_blocker, evidence (claim, url, quote), confidence, notes, needs_human, human_reason.

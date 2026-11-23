@@ -1,0 +1,164 @@
+[
+  {
+    "id": 2,
+    "name": "HubSpot",
+    "category": "CRM and Sales",
+    "confidence": "medium",
+    "needs_human": false,
+    "human_reason": null,
+    "notes": "Pass 1: Found legacy documentation referencing hapikey."
+  },
+  {
+    "id": 10,
+    "name": "DealCloud",
+    "category": "CRM and Sales",
+    "confidence": "medium",
+    "needs_human": true,
+    "human_reason": "Requires tenant-specific private Intapp endpoint verification.",
+    "notes": "Strict institutional gate: requires client relationship and private tenant base URL."
+  },
+  {
+    "id": 31,
+    "name": "Google Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "confidence": "high",
+    "needs_human": true,
+    "human_reason": "Developer token approval review required for production.",
+    "notes": "Developer token approval can take days to weeks."
+  },
+  {
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "confidence": "high",
+    "needs_human": true,
+    "human_reason": "Requires LinkedIn Marketing Developer Platform application approval.",
+    "notes": "Strict approval gate for ad campaign management."
+  },
+  {
+    "id": 44,
+    "name": "Salesforce Commerce Cloud",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "needs_human": true,
+    "human_reason": "Enterprise partner contract required for Account Manager and sandbox realms.",
+    "notes": "Requires institutional realm credentials."
+  },
+  {
+    "id": 46,
+    "name": "Squarespace",
+    "category": "Ecommerce",
+    "confidence": "medium",
+    "needs_human": false,
+    "human_reason": null,
+    "notes": "Pass 1: Did not detect that Commerce Advanced plan is required for live API keys."
+  },
+  {
+    "id": 49,
+    "name": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "confidence": "high",
+    "needs_human": true,
+    "human_reason": "Developer registration vetting and paid professional selling plan required.",
+    "notes": "Complex dual auth: AWS SigV4 + LWA OAuth."
+  },
+  {
+    "id": 50,
+    "name": "fanbasis",
+    "category": "Ecommerce",
+    "confidence": "low",
+    "needs_human": true,
+    "human_reason": "Could not locate public developer portal; likely closed consumer product.",
+    "notes": "No public API exists."
+  },
+  {
+    "id": 58,
+    "name": "Sherlock",
+    "category": "Data, SEO and Scraping",
+    "confidence": "low",
+    "needs_human": true,
+    "human_reason": "Ambiguous between open-source CLI and hosted REST service.",
+    "notes": "Pass 1: Unclear if official hosted REST API or pure CLI tool."
+  },
+  {
+    "id": 59,
+    "name": "Waterfall.io",
+    "category": "Data, SEO and Scraping",
+    "confidence": "medium",
+    "needs_human": true,
+    "human_reason": "Commercial data vendor requiring sales consultation for API access.",
+    "notes": "Niche B2B data vendor."
+  },
+  {
+    "id": 72,
+    "name": "Airtable",
+    "category": "Productivity and Project Management",
+    "confidence": "medium",
+    "needs_human": false,
+    "human_reason": null,
+    "notes": "Pass 1: Detected legacy API key reference alongside OAuth."
+  },
+  {
+    "id": 84,
+    "name": "Paygent Connect",
+    "category": "Finance and Fintech",
+    "confidence": "low",
+    "needs_human": true,
+    "human_reason": "Underwriting and partner gateway approval needed.",
+    "notes": "Merchant gateway partner gate."
+  },
+  {
+    "id": 85,
+    "name": "iPayX",
+    "category": "Finance and Fintech",
+    "confidence": "low",
+    "needs_human": true,
+    "human_reason": "Waitlist / private beta gating.",
+    "notes": "Private beta AI fintech product."
+  },
+  {
+    "id": 90,
+    "name": "PitchBook",
+    "category": "Finance and Fintech",
+    "confidence": "high",
+    "needs_human": true,
+    "human_reason": "High-value enterprise institutional contract required.",
+    "notes": "High commercial paywall."
+  },
+  {
+    "id": 91,
+    "name": "NotebookLM",
+    "category": "AI, Research and Media-native",
+    "confidence": "medium",
+    "needs_human": true,
+    "human_reason": "Need to clarify if NotebookLM itself has a public API or only Vertex AI.",
+    "notes": "Pass 1: Conflated Google Gemini API with consumer NotebookLM web application."
+  },
+  {
+    "id": 92,
+    "name": "Otter AI",
+    "category": "AI, Research and Media-native",
+    "confidence": "medium",
+    "needs_human": false,
+    "human_reason": null,
+    "notes": "Enterprise gate for official API; community MCP exists."
+  },
+  {
+    "id": 94,
+    "name": "Consensus",
+    "category": "AI, Research and Media-native",
+    "confidence": "low",
+    "needs_human": true,
+    "human_reason": "Partner/sales waitlist; no public self-serve endpoint.",
+    "notes": "Partner/waitlist gated; no public API docs."
+  },
+  {
+    "id": 98,
+    "name": "Mermaid CLI",
+    "category": "AI, Research and Media-native",
+    "confidence": "medium",
+    "needs_human": false,
+    "human_reason": null,
+    "notes": "Pass 1: Assumed diagram rendering REST endpoint."
+  }
+]
