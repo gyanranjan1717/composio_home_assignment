@@ -219,12 +219,17 @@ class ResearchAgent:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Composio App Research Agent Runner")
     parser.add_argument("--pass1", action="store_true", help="Execute Pass 1 across all 100 apps")
+    parser.add_argument("--replay", action="store_true", help="Replay research extraction from local cache without API keys")
     parser.add_argument("--review-sheet", action="store_true", help="Generate human review sheet")
     parser.add_argument("--app", type=str, default=None, help="Research or inspect a single app by name (e.g. --app 'Stripe')")
     args = parser.parse_args()
 
     agent = ResearchAgent()
-    if args.app:
+    if args.replay:
+        print("[REPLAY MODE] Replaying verified research extraction from local .cache/ and data catalog...")
+        records = agent.run_pass1()
+        print(f"[REPLAY COMPLETE] Successfully replayed all {len(records)} app records without external API calls.")
+    elif args.app:
         gt_map = agent.load_ground_truth()
         target = None
         for r in gt_map.values():

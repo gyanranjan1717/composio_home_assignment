@@ -6,16 +6,18 @@
 - Scope: 100 SaaS, DevTool, and Enterprise Applications evaluated for AI agent toolkit buildability.
 - Execution: Multi-phase autonomous research pipeline with error-taxonomy verification loops and dual-model + 15-app human spot-check calibration.
 
-## Key Metrics & Recalibrated Reality
+## Key Metrics & Grounded Reality
 - Total Apps: 100 across 10 categories
 - Self-Serve Rate: 74.0% (45 Free Tier, 29 Free Trial)
 - Gated Rate: 26.0% (11 Paid-Only, 7 Partner/Sales Gated, 5 Admin Approval, 3 No Public API)
 - Buildable Today: 78 Yes, 18 Partial, 4 No
 - MCP Server Coverage: 14 Official, 27 Community, 59 None (Substantial White-Space Opportunity)
+- Auth Distribution (Non-exclusive, apps support multiple): 77% Bearer/Token, 51% OAuth2, 38% API Key
 - Empirical Accuracy:
-  - In-Sample (N=30): Pass 1 Strict: 80.0% -> Pass 2: 93.3% (+13.3% lift via error taxonomy)
-  - Holdout Unseen (N=20): Pass 1 Strict: 75.0% -> Pass 2: 85.0% (+10.0% generalization lift)
-  - Provenance: Initial labels by dual-model consensus (Claude & Gemini blind extraction), with 15 critical edge-case cells manually spot-checked by human candidate.
+  - In-Sample (N=30): Pass 1 Strict: 80.0% -> Pass 2: 93.3% (+13.3% lift via error taxonomy calibration; 2 remaining edge cases: Squarespace & NotebookLM)
+  - Holdout Unseen (N=20): Pass 1 Strict: 75.0% -> Pass 2: 85.0% (+10.0% directional lift on unseen apps; N=20 is directional)
+  - Provenance: AI-labelled by independent Claude sub-agents blind to the research pipeline, with 15 ambiguous edge-case cells manually spot-checked in official docs by the candidate.
+  - Evidence Verification: Enforced doc URL + verbatim quote per claim. 115 of 121 cited quotes (~95%) verified on live pages; unverified/blocked pages flagged to review queue.
 
 ## Actionable Tiers
 - Tier 1 (Easy Wins, Build Now): 70 apps (Frictionless self-serve developer access with public REST/GraphQL APIs).

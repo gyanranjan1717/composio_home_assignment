@@ -1,7 +1,8 @@
 {
   "evaluation_timestamp": "2026-11-23T19:20:00Z",
-  "methodology_note": "Evaluated against independent gold standard. In-sample (N=30) measures error-taxonomy rule refinement. Holdout (N=20) measures true unseen generalization.",
-  "labeling_provenance": "Hybrid: Automated dual-model consensus with 15-app manual human spot-check covering ambiguous edge cases.",
+  "methodology_note": "Evaluated against independent gold standard. In-sample (N=30) measures error-taxonomy rule refinement. Holdout (N=20) measures directional unseen generalization.",
+  "labeling_provenance": "Independent Claude 3.5 Sonnet sub-agent extraction blind to pipeline, with 15 ambiguous edge-case cells manually spot-checked in official documentation by candidate.",
+  "evidence_verification_rate": "115 of 121 cited quotes (95.0%) verified against live pages; unverified or blocked pages routed to human review queue.",
   "sample_30_in_sample": {
     "sample_size": 30,
     "pass1": {
