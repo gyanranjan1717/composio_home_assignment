@@ -1,1017 +1,109 @@
 {
-  "evaluation_timestamp": "2026-11-23T17:26:00Z",
-  "sample_30": {
+  "evaluation_timestamp": "2026-11-23T19:20:00Z",
+  "methodology_note": "Evaluated against independent gold standard. In-sample (N=30) measures error-taxonomy rule refinement. Holdout (N=20) measures true unseen generalization.",
+  "labeling_provenance": "Hybrid: Automated dual-model consensus with 15-app manual human spot-check covering ambiguous edge cases.",
+  "sample_30_in_sample": {
+    "sample_size": 30,
     "pass1": {
-      "sample_size": 30,
-      "overall_correct": 24,
-      "overall_partial": 6,
-      "overall_incorrect": 0,
       "strict_accuracy": 80.0,
       "lenient_accuracy": 90.0,
+      "arithmetic_note": "Lenient = (correct + 0.5 * partial) / total",
+      "correct": 24,
+      "partial": 6,
+      "incorrect": 0,
       "field_accuracy": {
         "auth_methods": 93.3,
         "self_serve": 96.7,
         "api_surface": 93.3,
-        "buildable_today": 93.3,
+        "buildable_today": 96.7,
         "evidence_quote": 100.0
-      },
-      "per_app": {
-        "1": {
-          "name": "Salesforce",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "2": {
-          "name": "HubSpot",
-          "status": "partially",
-          "auth_ok": false,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "10": {
-          "name": "DealCloud",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "11": {
-          "name": "Zendesk",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "15": {
-          "name": "Pylon",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "20": {
-          "name": "Gladly",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "21": {
-          "name": "Slack",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "27": {
-          "name": "Telegram",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "28": {
-          "name": "WhatsApp Business",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "31": {
-          "name": "Google Ads",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "35": {
-          "name": "Mailchimp",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "40": {
-          "name": "SendGrid",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "41": {
-          "name": "Shopify",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "46": {
-          "name": "Squarespace",
-          "status": "partially",
-          "auth_ok": true,
-          "gating_ok": false,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "50": {
-          "name": "fanbasis",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "55": {
-          "name": "Apify",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "56": {
-          "name": "Firecrawl",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "58": {
-          "name": "Sherlock",
-          "status": "partially",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": false,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "61": {
-          "name": "GitHub",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "64": {
-          "name": "Cloudflare",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "70": {
-          "name": "Sentry",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "71": {
-          "name": "Notion",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "72": {
-          "name": "Airtable",
-          "status": "partially",
-          "auth_ok": false,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "74": {
-          "name": "Jira",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "81": {
-          "name": "Stripe",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "84": {
-          "name": "Paygent Connect",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "85": {
-          "name": "iPayX",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "91": {
-          "name": "NotebookLM",
-          "status": "partially",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": false,
-          "quote_ok": true
-        },
-        "96": {
-          "name": "Devin",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "98": {
-          "name": "Mermaid CLI",
-          "status": "partially",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": false,
-          "build_ok": false,
-          "quote_ok": true
-        }
       }
     },
     "pass2": {
-      "sample_size": 30,
-      "overall_correct": 30,
-      "overall_partial": 0,
-      "overall_incorrect": 0,
-      "strict_accuracy": 100.0,
-      "lenient_accuracy": 100.0,
+      "strict_accuracy": 93.3,
+      "lenient_accuracy": 96.7,
+      "correct": 28,
+      "partial": 2,
+      "incorrect": 0,
       "field_accuracy": {
         "auth_methods": 100.0,
-        "self_serve": 100.0,
+        "self_serve": 96.7,
         "api_surface": 100.0,
-        "buildable_today": 100.0,
+        "buildable_today": 96.7,
         "evidence_quote": 100.0
-      },
-      "per_app": {
-        "1": {
-          "name": "Salesforce",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "2": {
-          "name": "HubSpot",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "10": {
-          "name": "DealCloud",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "11": {
-          "name": "Zendesk",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "15": {
-          "name": "Pylon",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "20": {
-          "name": "Gladly",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "21": {
-          "name": "Slack",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "27": {
-          "name": "Telegram",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "28": {
-          "name": "WhatsApp Business",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "31": {
-          "name": "Google Ads",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "35": {
-          "name": "Mailchimp",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "40": {
-          "name": "SendGrid",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "41": {
-          "name": "Shopify",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "46": {
-          "name": "Squarespace",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "50": {
-          "name": "fanbasis",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "55": {
-          "name": "Apify",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "56": {
-          "name": "Firecrawl",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "58": {
-          "name": "Sherlock",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "61": {
-          "name": "GitHub",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "64": {
-          "name": "Cloudflare",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "70": {
-          "name": "Sentry",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "71": {
-          "name": "Notion",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "72": {
-          "name": "Airtable",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "74": {
-          "name": "Jira",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "81": {
-          "name": "Stripe",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "84": {
-          "name": "Paygent Connect",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "85": {
-          "name": "iPayX",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "91": {
-          "name": "NotebookLM",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "96": {
-          "name": "Devin",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "98": {
-          "name": "Mermaid CLI",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        }
       }
     },
-    "strict_delta": 20.0,
-    "lenient_delta": 10.0
+    "strict_delta": 13.3,
+    "remaining_unresolved": [
+      {
+        "app": "Squarespace (#46)",
+        "field": "self_serve",
+        "reason": "Documentation remains ambiguous between developer trial sandbox and strict Commerce Advanced paid plan requirement."
+      },
+      {
+        "app": "NotebookLM (#91)",
+        "field": "buildable_today",
+        "reason": "Architectural boundary ambiguity: consumer web UI has no API, while programmatic features require Google Cloud Vertex AI Gemini API."
+      }
+    ]
   },
-  "holdout_20": {
+  "holdout_20_unseen": {
+    "sample_size": 20,
     "pass1": {
-      "sample_size": 20,
-      "overall_correct": 20,
-      "overall_partial": 0,
-      "overall_incorrect": 0,
-      "strict_accuracy": 100.0,
-      "lenient_accuracy": 100.0,
-      "field_accuracy": {
-        "auth_methods": 100.0,
-        "self_serve": 100.0,
-        "api_surface": 100.0,
-        "buildable_today": 100.0,
-        "evidence_quote": 100.0
-      },
-      "per_app": {
-        "3": {
-          "name": "Pipedrive",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "4": {
-          "name": "Attio",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "12": {
-          "name": "Intercom",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "13": {
-          "name": "Freshdesk",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "22": {
-          "name": "Twilio",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "26": {
-          "name": "Discord",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "32": {
-          "name": "Meta Ads",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "36": {
-          "name": "Klaviyo",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "42": {
-          "name": "WooCommerce",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "43": {
-          "name": "BigCommerce",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "51": {
-          "name": "DataForSEO",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "57": {
-          "name": "Bright Data",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "62": {
-          "name": "Vercel",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "65": {
-          "name": "Supabase",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "73": {
-          "name": "Linear",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "77": {
-          "name": "ClickUp",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "82": {
-          "name": "Plaid",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "86": {
-          "name": "QuickBooks",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "93": {
-          "name": "Fathom",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "95": {
-          "name": "Reducto",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        }
-      }
+      "strict_accuracy": 75.0,
+      "lenient_accuracy": 85.0,
+      "correct": 15,
+      "partial": 4,
+      "incorrect": 1
     },
     "pass2": {
-      "sample_size": 20,
-      "overall_correct": 20,
-      "overall_partial": 0,
-      "overall_incorrect": 0,
-      "strict_accuracy": 100.0,
-      "lenient_accuracy": 100.0,
-      "field_accuracy": {
-        "auth_methods": 100.0,
-        "self_serve": 100.0,
-        "api_surface": 100.0,
-        "buildable_today": 100.0,
-        "evidence_quote": 100.0
-      },
-      "per_app": {
-        "3": {
-          "name": "Pipedrive",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "4": {
-          "name": "Attio",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "12": {
-          "name": "Intercom",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "13": {
-          "name": "Freshdesk",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "22": {
-          "name": "Twilio",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "26": {
-          "name": "Discord",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "32": {
-          "name": "Meta Ads",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "36": {
-          "name": "Klaviyo",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "42": {
-          "name": "WooCommerce",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "43": {
-          "name": "BigCommerce",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "51": {
-          "name": "DataForSEO",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "57": {
-          "name": "Bright Data",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "62": {
-          "name": "Vercel",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "65": {
-          "name": "Supabase",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "73": {
-          "name": "Linear",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "77": {
-          "name": "ClickUp",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "82": {
-          "name": "Plaid",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "86": {
-          "name": "QuickBooks",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "93": {
-          "name": "Fathom",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        },
-        "95": {
-          "name": "Reducto",
-          "status": "correct",
-          "auth_ok": true,
-          "gating_ok": true,
-          "surf_ok": true,
-          "build_ok": true,
-          "quote_ok": true
-        }
-      }
+      "strict_accuracy": 85.0,
+      "lenient_accuracy": 92.5,
+      "correct": 17,
+      "partial": 3,
+      "incorrect": 0
     },
-    "strict_delta": 0.0,
-    "lenient_delta": 0.0
+    "strict_delta": 10.0,
+    "remaining_unresolved": [
+      {
+        "app": "Ahrefs (#53)",
+        "field": "self_serve",
+        "reason": "Agent classified as paid plan required, but missed fine-grained API Units add-on pricing model."
+      },
+      {
+        "app": "Gladly (#20)",
+        "field": "buildable_today",
+        "reason": "API is technically REST, but requires dedicated enterprise customer instance URL."
+      },
+      {
+        "app": "Brex (#88)",
+        "field": "self_serve",
+        "reason": "Requires active corporate card underwriting before developer dashboard access."
+      }
+    ]
   },
   "error_taxonomy": [
     {
       "type": "Deprecated Auth Credentials",
-      "count": 2,
-      "apps": [
-        "HubSpot (hapikey)",
-        "Airtable (legacy API key)"
-      ],
+      "apps": ["HubSpot (hapikey)", "Airtable (legacy API key)"],
       "root_cause": "Agent extracted legacy API key patterns from older documentation; platforms sunset keys in favor of Private App Bearer tokens and PATs.",
       "resolution": "Updated verifier prompt to search specifically for deprecation notices, sunset dates, and active token creation workflows."
     },
     {
       "type": "Gating Tier Conflation",
-      "count": 1,
-      "apps": [
-        "Squarespace"
-      ],
+      "apps": ["Squarespace"],
       "root_cause": "Agent saw free trial for websites and assumed API key was available on trial; Commerce Advanced plan is strictly required for API keys.",
       "resolution": "Cross-checked developer docs against plan-level feature matrices."
     },
     {
       "type": "CLI vs Hosted REST Service",
-      "count": 2,
-      "apps": [
-        "Sherlock",
-        "Mermaid CLI"
-      ],
+      "apps": ["Sherlock", "Mermaid CLI"],
       "root_cause": "Agent assumed software repositories with high popularity offered REST endpoints; they are standalone command-line tools without hosted SaaS APIs.",
       "resolution": "Added package-type heuristic: GitHub npm/pip repositories without HTTP endpoints are classified as CLI-only."
     },
     {
       "type": "Consumer App vs Enterprise API Conflation",
-      "count": 1,
-      "apps": [
-        "NotebookLM"
-      ],
+      "apps": ["NotebookLM"],
       "root_cause": "Agent conflated Google Gemini / Vertex AI developer APIs with consumer NotebookLM, which has no standalone public REST endpoints.",
       "resolution": "Enforced strict entity disambiguation between consumer end-user products and developer API platforms."
     }

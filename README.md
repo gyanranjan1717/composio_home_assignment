@@ -1,7 +1,8 @@
 # Composio AI Product Ops: 100-App Research, Pattern Analysis & Verification Engine
 
 > **Take-Home Project for AI Product Ops Intern Role at Composio**  
-> Autonomous research pipeline, macro pattern engine, empirical verification loops (80.0% → 100.0% accuracy), and an interactive standalone HTML case study dashboard.
+> Autonomous research pipeline, macro pattern engine, empirical verification loops (80.0% → 93.3% in-sample, 75.0% → 85.0% holdout), and an interactive standalone HTML case study dashboard.
+> **Live GitHub Pages Deployment:** [https://gyanranjan1717.github.io/composio_home_assignment/](https://gyanranjan1717.github.io/composio_home_assignment/)
 
 ---
 
@@ -10,10 +11,10 @@
 Composio turns software apps into toolkits that AI agents can call. Building hundreds of connectors cannot be done by hand without operational bottlenecks. This project solves that operational scaling challenge across a real-world set of **100 diverse SaaS and developer applications across 10 categories**.
 
 ### The 5 Macro Patterns Uncovered
-1. **Bearer Tokens & OAuth 2.0 Eclipse Legacy Auth (79% & 51%):** Modern tools have largely sunset static API keys (e.g., Airtable sunset in Feb 2024, HubSpot Private Apps) in favor of scoped Bearer tokens and OAuth2 flows.
-2. **78% Self-Serve Velocity:** 78 out of 100 apps allow developers to acquire credentials instantly without sales calls (49 perpetual free tiers, 29 free trials).
+1. **Bearer Tokens (77%) & OAuth 2.0 (51%) Dominate Modern Auth:** Static API keys (38%) remain common for self-serve utility endpoints, but modern platforms increasingly deprecate un-scoped keys (e.g. Airtable sunset in Feb 2024, HubSpot Private Apps) in favor of scoped Bearer tokens and OAuth2 flows.
+2. **74% Self-Serve Velocity:** 74 out of 100 apps allow developers to acquire credentials instantly without sales calls (45 perpetual free tiers, 29 free trials).
 3. **The Gating Polarities:** Developer & Infrastructure (100% self-serve) and Productivity (100% self-serve) have zero onboarding friction. Conversely, Finance (40% gated) and Enterprise CRM (20% gated) suffer from merchant underwriting, institutional contracts, and compliance gates.
-4. **Huge MCP White-Space Opportunity (58% Missing MCP):** Only 6% of apps have official MCP servers and 36% have community servers. 58% of apps have ZERO MCP implementations—presenting an open market for Composio first-party toolkits (e.g., Plaid, Close, Plain, Ramp).
+4. **Significant MCP White-Space Opportunity (59% Missing MCP):** While developer and data giants (GitHub, Stripe, Notion, Linear, Sentry, Cloudflare, Supabase, Vercel, Shopify, Firecrawl, Devin) now offer official MCP servers (14% official, 27% community), 59% of apps have ZERO MCP implementations—presenting an open market for Composio first-party toolkits (e.g., Plaid, Close, Plain, Ramp).
 5. **The Three Architectural Traps:**
    - *CLI Trojan Horses (Sherlock, Mermaid CLI):* Open-source tools that have NO hosted REST API and must be wrapped as subshell CLI tools.
    - *Ghost APIs (fanbasis, Consensus, NotebookLM):* High consumer interest but no public 3rd-party developer REST API (NotebookLM is accessed via Google Cloud Vertex AI).
@@ -120,43 +121,36 @@ python -m pytest tests/ -v
 
 1. **Pass 1 Extraction (Baseline):** The agent fetches documentation, caches text to `.cache/`, and extracts structured records enforcing evidence URLs and verbatim quotes.
 2. **Stratified Sampling (N=30):** 3 apps per category across all 10 categories are extracted into `data/review_sheet.html` and `data/review_sheet_pass1.csv`.
-3. **Human Ground-Truth Labeling:** Hand-checked against official docs. Baseline Pass 1 accuracy:
+3. **Ground-Truth Labeling & Provenance:** Initial dual-model extraction (Gemini + Claude) followed by a **manual 15-app spot-check by the candidate** focusing on ambiguous edge cases (e.g. Squarespace commerce gating, Airtable PAT deprecation, NotebookLM vs Vertex AI). Baseline Pass 1 accuracy:
    - **Strict Accuracy:** 80.0% (24/30 perfect matches)
-   - **Lenient Accuracy:** 90.0% (includes partials)
+   - **Lenient Accuracy:** 90.0% (credit for partial matches)
 4. **Error Taxonomy Analysis:** Isolated 4 root causes:
    - *Deprecated Auth (HubSpot, Airtable):* Extracted legacy API keys instead of modern PATs.
    - *Tier Gating (Squarespace):* Missed that Commerce Advanced plan is strictly required for API keys.
    - *CLI Tools (Sherlock, Mermaid CLI):* Misclassified local CLI tools as hosted REST APIs.
    - *Entity Conflation (NotebookLM):* Conflated Google Vertex AI Gemini API with consumer UI.
-5. **Independent Verifier Agent:** Re-refetches pages, checks DOM elements, enforces package-type heuristics, and re-researches disputed claims.
+5. **Independent Verifier Agent:** Re-fetches pages, verifies cited DOM quotes, enforces package-type heuristics, and re-researches disputed claims.
 6. **Pass 2 Empirical Calibration:**
-   - **Sample (N=30):** 80.0% → **100.0% (+20.0% lift)**
-   - **Holdout Set (N=20 non-overlapping):** **100.0%** (confirms zero overfitting).
+   - **In-Sample (N=30):** 80.0% → **93.3% (+13.3% lift)**. Remaining 2 partials transparently unresolved (Squarespace pricing plan tiering and NotebookLM UI vs API boundary).
+   - **Holdout Set (N=20 unseen):** 75.0% → **85.0% (+10.0% lift)**, proving genuine model generalization rather than overfitting.
 
 ---
 
-## 🌐 Deploying the HTML Case Study (`site/index.html`)
+## 🌐 Deploying the HTML Case Study (`docs/index.html` / `site/index.html`)
 
-The case study is a **single, self-contained HTML file** with embedded Tailwind CSS, Chart.js, datasets, and offline Blob downloaders.
+The case study is a **single, self-contained HTML file** with embedded Tailwind CSS, Chart.js, full 100-app JSON datasets, interactive filters, search, and CSV export.
 
-### Option A: Deploy to Vercel (Instant)
-```bash
-# Install Vercel CLI
-npm i -g vercel
+### Live Deployment via GitHub Pages
+- **Live URL:** [https://gyanranjan1717.github.io/composio_home_assignment/](https://gyanranjan1717.github.io/composio_home_assignment/)
+- Configured from GitHub repository `main` branch under the `/docs` folder.
 
-# Deploy site/ directory
-cd site
-vercel --prod
-```
-
-### Option B: Deploy to GitHub Pages
-1. In repository settings, navigate to **Pages**.
-2. Set Source to `Deploy from a branch`.
-3. Select `main` branch and folder `/site`.
-4. Click **Save** — site is live instantly at `https://<username>.github.io/<repo-name>/`.
+### Local Viewing
+Simply open `docs/index.html` or `site/index.html` directly in any web browser — no web server required.
 
 ---
 
-## 🛡️ Honesty & Constraints
-- **Zero Hallucination Guarantee:** Every claim in the dataset is linked to an official URL and backed by a verbatim excerpt.
-- **No Paid Accounts Required:** Where an app is gated behind payment or enterprise sales (e.g. PitchBook, DealCloud, Squarespace), stating the gating policy with evidence is the correct finding.
+## 🛡️ Honesty, Engineering Notes & Constraints
+- **Zero Hallucination Guarantee:** Every claim in the dataset is linked to an official documentation URL and backed by a verbatim excerpt.
+- **Tooling Adaptations:** Composio's native search endpoint was retired (HTTP 410 Gone), so search queries were performed via Tavily and direct HTTP doc fetching.
+- **Rate-Limit Resilience:** Rate limits on free-tier LLM endpoints were managed via deterministic disk-level page caching (`.cache/`).
+- **No Paid Accounts Required:** Where an app is gated behind payment or enterprise sales (e.g. PitchBook, DealCloud, Squarespace), stating the gating policy with documentation evidence is the correct product ops finding.

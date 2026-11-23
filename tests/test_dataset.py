@@ -53,12 +53,13 @@ def test_results_schema_and_completeness():
 
 def test_verification_metrics_consistency():
     metrics = load_dataset("accuracy_metrics.json")
-    assert "sample_30" in metrics
-    assert "holdout_20" in metrics
-    assert metrics["sample_30"]["pass1"]["strict_accuracy"] == 80.0
-    assert metrics["sample_30"]["pass2"]["strict_accuracy"] == 100.0
-    assert metrics["sample_30"]["strict_delta"] == 20.0
-    assert metrics["holdout_20"]["pass2"]["strict_accuracy"] == 100.0
+    assert "sample_30_in_sample" in metrics
+    assert "holdout_20_unseen" in metrics
+    assert metrics["sample_30_in_sample"]["pass1"]["strict_accuracy"] == 80.0
+    assert metrics["sample_30_in_sample"]["pass2"]["strict_accuracy"] == 93.3
+    assert metrics["sample_30_in_sample"]["strict_delta"] == 13.3
+    assert metrics["holdout_20_unseen"]["pass2"]["strict_accuracy"] == 85.0
+    assert metrics["holdout_20_unseen"]["strict_delta"] == 10.0
 
 
 def test_human_review_queue():

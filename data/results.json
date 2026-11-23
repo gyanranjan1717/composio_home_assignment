@@ -791,7 +791,7 @@
       "type": "REST",
       "breadth": "large",
       "public_docs": true,
-      "existing_mcp": "community",
+      "existing_mcp": "none",
       "mcp_link": "https://github.com/modelcontextprotocol/servers/tree/main/src/twilio"
     },
     "buildable_today": "yes",
@@ -1045,7 +1045,7 @@
       "OAuth2",
       "API key"
     ],
-    "self_serve": "self_serve_trial",
+    "self_serve": "paid_plan_required",
     "self_serve_reason": "7-day free trial; API ID and API Token available under Company Settings > Integrations > API Keys.",
     "api_surface": {
       "type": "REST",
@@ -1055,7 +1055,7 @@
       "mcp_link": null
     },
     "buildable_today": "yes",
-    "main_blocker": "none",
+    "main_blocker": "paid-only",
     "evidence": [
       {
         "claim": "Aircall Public API supports HTTP Basic Auth using api_id:api_token.",
@@ -1157,7 +1157,7 @@
       "OAuth2",
       "Bearer/token"
     ],
-    "self_serve": "self_serve_free",
+    "self_serve": "self_serve_trial",
     "self_serve_reason": "Free Meta developer account gives instant access to Development Mode and test ad accounts.",
     "api_surface": {
       "type": "REST",
@@ -1166,8 +1166,8 @@
       "existing_mcp": "none",
       "mcp_link": null
     },
-    "buildable_today": "yes",
-    "main_blocker": "none",
+    "buildable_today": "partial",
+    "main_blocker": "approval review",
     "evidence": [
       {
         "claim": "Meta Marketing API uses OAuth 2.0 User and System User access tokens.",
@@ -1379,7 +1379,7 @@
       "OAuth2",
       "Bearer/token"
     ],
-    "self_serve": "self_serve_free",
+    "self_serve": "self_serve_trial",
     "self_serve_reason": "Developer portal allows instant app creation and sandbox access tokens; production access requires app review.",
     "api_surface": {
       "type": "REST",
@@ -1388,8 +1388,8 @@
       "existing_mcp": "none",
       "mcp_link": null
     },
-    "buildable_today": "yes",
-    "main_blocker": "none",
+    "buildable_today": "partial",
+    "main_blocker": "approval review",
     "evidence": [
       {
         "claim": "Pinterest API v5 authenticates using OAuth 2.0 Bearer tokens.",
@@ -1497,7 +1497,7 @@
       "type": "REST / GraphQL",
       "breadth": "large",
       "public_docs": true,
-      "existing_mcp": "community",
+      "existing_mcp": "official",
       "mcp_link": "https://github.com/shopify/shopify-mcp"
     },
     "buildable_today": "yes",
@@ -1688,7 +1688,7 @@
       "mcp_link": null
     },
     "buildable_today": "yes",
-    "main_blocker": "none",
+    "main_blocker": "paid-only",
     "evidence": [
       {
         "claim": "Squarespace API uses Bearer API Keys or OAuth 2.0.",
@@ -1908,7 +1908,7 @@
       "existing_mcp": "none",
       "mcp_link": null
     },
-    "buildable_today": "partial",
+    "buildable_today": "yes",
     "main_blocker": "paid-only",
     "evidence": [
       {
@@ -2195,7 +2195,7 @@
       "Bearer/token",
       "API key"
     ],
-    "self_serve": "self_serve_trial",
+    "self_serve": "paid_plan_required",
     "self_serve_reason": "14-day free trial includes free credits; Webhook integrations and API keys accessible in Settings.",
     "api_surface": {
       "type": "REST",
@@ -2205,7 +2205,7 @@
       "mcp_link": "https://github.com/modelcontextprotocol/servers/tree/main/src/clay"
     },
     "buildable_today": "yes",
-    "main_blocker": "none",
+    "main_blocker": "paid-only",
     "evidence": [
       {
         "claim": "Clay supports inbound webhook APIs and REST enrichment actions.",
@@ -2276,7 +2276,7 @@
       "type": "REST",
       "breadth": "large",
       "public_docs": true,
-      "existing_mcp": "community",
+      "existing_mcp": "official",
       "mcp_link": "https://github.com/modelcontextprotocol/servers/tree/main/src/vercel"
     },
     "buildable_today": "yes",
@@ -2387,7 +2387,7 @@
       "type": "REST / GraphQL",
       "breadth": "large",
       "public_docs": true,
-      "existing_mcp": "community",
+      "existing_mcp": "official",
       "mcp_link": "https://github.com/supabase/mcp-server"
     },
     "buildable_today": "yes",
@@ -2500,7 +2500,7 @@
       "type": "REST",
       "breadth": "large",
       "public_docs": true,
-      "existing_mcp": "community",
+      "existing_mcp": "official",
       "mcp_link": "https://github.com/mongodb/mcp-server"
     },
     "buildable_today": "yes",
@@ -2531,7 +2531,7 @@
       "API key",
       "Bearer/token"
     ],
-    "self_serve": "self_serve_trial",
+    "self_serve": "paid_plan_required",
     "self_serve_reason": "14-day free trial provides API Key and Application Key access in Organization Settings.",
     "api_surface": {
       "type": "REST",
@@ -2541,7 +2541,7 @@
       "mcp_link": null
     },
     "buildable_today": "yes",
-    "main_blocker": "none",
+    "main_blocker": "paid-only",
     "evidence": [
       {
         "claim": "Datadog API requires DD-API-KEY and DD-APPLICATION-KEY headers.",
@@ -2573,7 +2573,7 @@
       "type": "REST",
       "breadth": "large",
       "public_docs": true,
-      "existing_mcp": "community",
+      "existing_mcp": "official",
       "mcp_link": "https://github.com/getsentry/sentry-mcp"
     },
     "buildable_today": "yes",
@@ -2684,7 +2684,7 @@
       "type": "GraphQL",
       "breadth": "large",
       "public_docs": true,
-      "existing_mcp": "community",
+      "existing_mcp": "official",
       "mcp_link": "https://github.com/jerhadf/linear-mcp-server"
     },
     "buildable_today": "yes",
@@ -2722,7 +2722,7 @@
       "type": "REST",
       "breadth": "large",
       "public_docs": true,
-      "existing_mcp": "community",
+      "existing_mcp": "official",
       "mcp_link": "https://github.com/modelcontextprotocol/servers/tree/main/src/jira"
     },
     "buildable_today": "yes",
@@ -2901,7 +2901,7 @@
       "Bearer/token",
       "OAuth2"
     ],
-    "self_serve": "self_serve_trial",
+    "self_serve": "paid_plan_required",
     "self_serve_reason": "30-day free trial or paid plan allows generating API Access Tokens under Account > Personal Settings > API Access.",
     "api_surface": {
       "type": "REST",
@@ -2911,7 +2911,7 @@
       "mcp_link": null
     },
     "buildable_today": "yes",
-    "main_blocker": "none",
+    "main_blocker": "paid-only",
     "evidence": [
       {
         "claim": "Smartsheet REST API authenticates using Bearer access tokens.",
@@ -2982,7 +2982,7 @@
       "type": "REST",
       "breadth": "large",
       "public_docs": true,
-      "existing_mcp": "community",
+      "existing_mcp": "official",
       "mcp_link": "https://github.com/stripe/agent-toolkit"
     },
     "buildable_today": "yes",
@@ -3242,7 +3242,7 @@
       "mcp_link": null
     },
     "buildable_today": "yes",
-    "main_blocker": "none",
+    "main_blocker": "paid-only",
     "evidence": [
       {
         "claim": "Brex API authenticates using Bearer user tokens or OAuth 2.0.",
@@ -3279,7 +3279,7 @@
       "mcp_link": null
     },
     "buildable_today": "yes",
-    "main_blocker": "none",
+    "main_blocker": "paid-only",
     "evidence": [
       {
         "claim": "Ramp Developer API authenticates via OAuth 2.0 Bearer tokens.",

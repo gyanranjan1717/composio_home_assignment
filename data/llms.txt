@@ -4,25 +4,30 @@
 ## Overview
 - Project: Composio AI Product Ops Take-Home Assignment
 - Scope: 100 SaaS, DevTool, and Enterprise Applications evaluated for AI agent toolkit buildability.
-- Execution: Multi-phase autonomous research agent with verification loops and human ground-truth calibration.
+- Execution: Multi-phase autonomous research pipeline with error-taxonomy verification loops and dual-model + 15-app human spot-check calibration.
 
-## Key Metrics
+## Key Metrics & Recalibrated Reality
 - Total Apps: 100 across 10 categories
-- Self-Serve Rate: 78.0% (49 Free Tier, 29 Free Trial)
-- Gated Rate: 22.0% (8 Paid-Only, 6 Partner/Sales Gated, 5 Admin Approval, 3 No Public API)
-- Buildable Today: 85 Yes, 11 Partial, 4 No
-- MCP Server Coverage: 6 Official, 36 Community, 58 None (White-Space Opportunity)
-- Empirical Accuracy: Pass 1 Strict: 80.0% -> Pass 2 Strict: 100.0% (+20.0% lift via verification loop)
+- Self-Serve Rate: 74.0% (45 Free Tier, 29 Free Trial)
+- Gated Rate: 26.0% (11 Paid-Only, 7 Partner/Sales Gated, 5 Admin Approval, 3 No Public API)
+- Buildable Today: 78 Yes, 18 Partial, 4 No
+- MCP Server Coverage: 14 Official, 27 Community, 59 None (Substantial White-Space Opportunity)
+- Empirical Accuracy:
+  - In-Sample (N=30): Pass 1 Strict: 80.0% -> Pass 2: 93.3% (+13.3% lift via error taxonomy)
+  - Holdout Unseen (N=20): Pass 1 Strict: 75.0% -> Pass 2: 85.0% (+10.0% generalization lift)
+  - Provenance: Initial labels by dual-model consensus (Claude & Gemini blind extraction), with 15 critical edge-case cells manually spot-checked by human candidate.
 
 ## Actionable Tiers
-- Tier 1 (Easy Wins, Build Now): 76 apps (Frictionless self-serve developer access with public REST/GraphQL APIs).
-- Tier 2 (Workarounds / Paid / CLI): 13 apps (Requires paid subscription, trial credits, or local CLI wrapper).
-- Tier 3 (High-Touch / Partner Gated): 11 apps (Requires enterprise sales outreach, merchant underwriting, or manual developer review).
+- Tier 1 (Easy Wins, Build Now): 70 apps (Frictionless self-serve developer access with public REST/GraphQL APIs).
+- Tier 2 (Workarounds / Paid / CLI): 17 apps (Requires paid subscription, trial credits, or local CLI wrapper).
+- Tier 3 (High-Touch / Partner Gated): 13 apps (Requires enterprise sales outreach, merchant underwriting, or manual developer review).
 
 ## Edge Cases & Architectural Traps
 - CLI-Only (Not SaaS REST): Sherlock (Python OSINT CLI), Mermaid CLI (npm diagram compiler).
 - Ghost APIs (No Public 3rd Party API): fanbasis, Consensus, NotebookLM (consumer app; enterprise via Vertex AI).
 - High-Friction Developer Reviews: Google Ads (developer token review), LinkedIn Ads (partner review), Amazon SP-API (AWS SigV4 + seller vetting).
 
-## Data Schema
-Each record contains: id, name, category, one_liner, auth_methods, self_serve, self_serve_reason, api_surface (type, breadth, public_docs, existing_mcp, mcp_link), buildable_today, main_blocker, evidence (claim, url, quote), confidence, notes, needs_human, human_reason.
+## Tooling Context
+- Composio native search retired (HTTP 410); fallback to Tavily and direct HTTP fetchers with disk caching.
+- Gemini free-tier rate limits (15 RPM) managed via lightweight fallback extraction models and deterministic caching.
+- In-browser simulator is a replay inspector of verified extraction runs.
